@@ -17,7 +17,7 @@ export class AppRouter {
         .map(interfaceName => networkInterfaces[interfaceName]!.find(item => item.family === 'IPv4' && !item.internal))
         .filter(Boolean)[0]?.address;
             
-      res.send(`boostrap ${ipAddress}`)
+      res.send(`bootstrap ${ipAddress}`)
     });
 
     this.app.use("/api/auth", authRouter);
