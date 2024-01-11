@@ -1,4 +1,4 @@
-FROM node:20-alpine
+FROM node:20-alpine AS build
 
 WORKDIR /app 
 
@@ -8,6 +8,13 @@ RUN npm i
 
 COPY . .
 
-CMD ["npm", "run", "start"]
+RUN npm run build 
 
-EXPOSE 3000
+FROM nginx:stable-alpine
+
+COPY --from=build /app/build /usr/share/nginx/html
+COPY --from=build /app/nginx.conf /etc/nginx/sites-available/default
+
+EXPOSE 80 443
+
+CMD [ "nginx", "-g", "daemon off;"]
