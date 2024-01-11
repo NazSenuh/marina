@@ -1,0 +1,126 @@
+.reporting-wrapper{
+  display: grid; 
+
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 0.4fr;
+  h1{
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 2;
+    grid-column-end: 2;
+    place-self: center start;
+  }
+
+}
+
+.search-reporting{
+  width: 264px;
+  grid-row-start: 1;
+  grid-column-start: 3;
+  grid-row-end: 2;
+  grid-column-end: 4;
+  place-self: center;
+}
+.seson-reporting{
+  width: 264px;
+  grid-row-start: 1;
+  grid-column-start: 4;
+  grid-row-end: 2;
+  grid-column-end: 5;
+  place-self: center;
+
+}
+.status-reporting{
+  width: 264px;
+  grid-row-start: 1;
+  grid-column-start: 5;
+  grid-row-end: 2;
+  grid-column-end: 6;
+  place-self: center;
+
+}
+.export-reporting{
+  grid-row-start: 1;
+  grid-column-start: 6;
+  grid-row-end: 2;
+  grid-column-end: 7;
+  place-self: center end;
+}
+.MuiOutlinedInput-notchedOutline {
+  border-color: #bfbfbf !important;
+  border-width: 1px !important;
+  color: #bfbfbf !important;
+  border-radius: 2px;
+}
+
+.MuiInputLabel-root {
+  color: #bfbfbf !important;
+  border-radius: 2px;
+}
+
+.MuiMenuItem-root {
+  font-family: "Poppins", sans-serif !important;
+}
+
+.searchInput{
+  height: "30px";
+  width: "264px";
+  font-family: "'Poppins', sans-serif";
+}
+
+
+
+@media (max-width: 1100px) {
+  .reporting-wrapper{
+    display: grid; 
+    width: 100%;
+  
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr ;
+    h1{
+      grid-row-start: 1;
+      grid-column-start: 1;
+      grid-row-end: 2;
+      grid-column-end: 2;
+      place-self: center start;
+    }
+  
+  }
+  .search-reporting{
+    width: 100%;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-row-end: 3;
+    grid-column-end: 4;
+    place-self: center;
+  }
+  .seson-reporting{
+    width: 100%;
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-row-end: 4;
+    grid-column-end: 4;
+    place-self: center;
+    margin: unset;
+
+  }
+  .status-reporting{
+    width: 100%;
+    grid-row-start: 4;
+    grid-column-start: 1;
+    grid-row-end: 5;
+    grid-column-end: 4;
+    place-self: center;
+    margin: unset;
+
+  }
+  .export-reporting{
+    width: 100%;
+    grid-row-start: 1;
+    grid-column-start: 3;
+    grid-row-end: 2;
+    grid-column-end: 4;
+    margin: unset;
+    place-self: center end;
+  }
+}

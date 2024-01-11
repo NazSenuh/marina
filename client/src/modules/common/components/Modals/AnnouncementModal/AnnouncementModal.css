@@ -1,0 +1,123 @@
+.modalWrapper {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFF;
+    color: #000000;
+    width: 443px;
+    min-height: 402px;
+    /* overflow-y: scroll; */
+}
+@media screen and (max-width: 820px) {
+  
+    .modalWrapper{
+      max-width: 390px;
+  
+    }
+  }
+
+.announcementLabel {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 24px;
+    /* margin-bottom: 8px; */
+}
+
+.title {
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    padding: 10;
+    align-items: center;
+    margin-left: 24px;
+    height: 56px;
+    background-color: #EFF4FD;
+}
+
+.inputsWrapper {
+    width: 100%;
+    padding: 24px;
+}
+
+.timePicker {
+    transform: translate(-50%, -50%);
+}
+
+.announcementButtonClose {
+    border-radius: 2px;
+    border: 1px solid #2E4880;
+    background: #2E4880;
+    color: #FFF;
+    padding: 6.4px 15px;
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.04);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.announcementButtonCloseDisable {
+    border-radius: 2px;
+    border: 1px solid  #D9D9D9;
+    background:  #F5F5F5;
+    padding: 6.4px 15px; 
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.02);
+    font-size: 14px;
+    font-weight: 400;
+}
+.css-4jnixx-MuiStack-root{
+    overflow: hidden !important;
+}
+
+:where(.css-dev-only-do-not-override-nllxry).ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner{
+    background: #2E4880;
+}
+.ant-picker-today-btn{
+    color: #2E4880 !important;
+}
+.css-1ed1o9w-MuiList-root-MuiMultiSectionDigitalClockSection-root{
+    height: fit-content;
+
+}
+.css-1ed1o9w-MuiList-root-MuiMultiSectionDigitalClockSection-root:not(:first-of-type){
+    height: fit-content;
+}
+.css-1ed1o9w-MuiList-root-MuiMultiSectionDigitalClockSection-root:last-of-type {
+    overflow-y: hidden !important;
+}
+.css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root {
+    pointer-events:none
+ }
+ .MuiButtonBase-root.MuiIconButton-root.MuiIconButton-edgeEnd.MuiIconButton-sizeMedium.css-1yq5fb3-MuiButtonBase-root-MuiIconButton-root{
+    pointer-events:all
+ }
+
+.ant-picker{
+    padding: 16px 14px;
+}
+.ant-picker-focused.ant-picker{
+    border-color: #bfbfbf !important;
+}
+.ant-picker{
+    border: 1px solid #bfbfbf !important;
+}
+.ant-picker .ant-picker-input > input{
+    font-size: 15px;
+}
+MuiInputBase-root MuiOutlinedInput-root
+.MuiInputBase-root .MuiOutlinedInput-root {
+    pointer-events: none;
+}
+
+.MuiButtonBase-root .MuiIconButton-root .MuiIconButton-edgeEnd .MuiIconButton-sizeMedium .css-1yq5fb3-MuiButtonBase-root-MuiIconButton-root{
+    pointer-events: all;
+}
+
+@media screen and (max-width: 820px) {
+    .modalWrapper{
+        width: 340px;
+    }
+
+}

@@ -1,0 +1,280 @@
+.formStyle {
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 24px;
+}
+
+.defaultInputWrapper {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.checkboxInputWrapper {
+    display: flex;
+    width: 100%;
+    padding: 24px;
+    align-items: center;
+}
+
+.checkboxWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 8px;
+}
+
+.defaultInputWrapper div:nth-child(2) div:first-child input {
+    border-radius: 0px 0px 2px 2px;
+    border-right: none;
+    padding-right: 20px;
+}
+
+.defaultInputWrapper div:nth-child(2) div:nth-child(2) input {
+    border-radius: 2px 2px 0px 0px;
+    border-left: none;
+}
+
+.buttonWrapper {
+    display: flex;
+    align-self: flex-end;
+    width: 100%;
+    justify-content: flex-end;
+    border-top: 0.2px solid #D9D9D9;
+}
+
+.labelStyle {
+    color: #000000;
+    margin-left: 4px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+
+}
+
+.separatorImg {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(25%, -50%);
+}
+
+.secondImg {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(-30%, -50%);
+}
+
+.datePicker{
+    z-index: 9999;
+    height: 40px;
+    width: 100%;
+    border-radius: 0;
+}
+
+.inputStyle {
+    all: unset;
+    padding: 8px 12px;
+    width: 100%;
+    border: 1px solid #D9D9D9;
+    border-radius: 2px;
+    box-sizing: border-box;
+
+    &::placeholder {
+        border-radius: 2px;
+    }
+}
+.ant-picker:hover{
+    border-color: #D9D9D9;
+}
+.ant-picker-focused.ant-picker{
+    border-color: #D9D9D9 !important
+}
+.ant-picker-focused.ant-picker{
+    box-shadow: none;
+}
+
+.ant-picker-dropdown .ant-picker-panel-container .ant-picker-panels {
+    z-index: 99999;
+    animation: none;
+    flex-wrap: nowrap; 
+    direction: ltr; 
+    background: #fff;
+ }
+.labelWrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 8px;
+}
+
+.doubleInputWrapper {
+    display: flex;
+    position: relative;
+    width: 50%;
+}
+
+.firstInpuDate {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #f3f3f3;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    width: 200px;
+    color: #333;
+}
+
+.firstInpuDate ::-webkit-datetime-edit {
+    color: #fd0808;
+}
+
+.checkbox-round {
+    width: 1.3em;
+    height: 1.3em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.checkboxWrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+}
+
+.radio-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.radio-element {
+    display: flex;
+    gap: 4px;
+}
+
+.active-checkbox-round {
+    border-radius: 50%;
+    background: #1460c8;
+    border: 1.0px solid #1460c8;
+    box-shadow: inset 0px 0px 0px 3px #fff;
+    background-color: #3d64b7;
+}
+
+.cancelButtonStyle {
+    margin-top: 10px;
+    background-color: #FFFFFF;
+    color: #000000;
+    padding: '6.4px 15px';
+    width: 114px;
+    height: 40px;
+    font-size: 14;
+    font-weight: 400;
+    border-radius: 2;
+    border: 1px solid #D9D9D9;
+    margin: 2;
+    font-family: "Poppins";
+}
+
+.reservebuttonStyle {
+    margin-top: 10px;
+    background-color: #2E4880;
+    color: white;
+    padding: '6.4px 15px';
+    width: 163px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 2;
+    border: 1px solid #2E4880;
+    margin: 2;
+    margin-left: 8px;
+    font-family: "Poppins";
+    margin-right: 24px;
+}
+
+.reservebuttonDisable {
+    margin-top: 10px;
+    background:  #F5F5F5;
+    color:  rgba(0, 0, 0, 0.25);
+    width: 163px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 2;
+    border: 1px solid  #D9D9D9;
+    margin-left: 8px;
+    font-family: "Poppins";
+    margin-right: 24px;
+}
+
+.errorText {
+    font-size: 12px; 
+    color: #EF4444;
+}
+
+
+@media (max-width: 920px) { 
+    .ant-picker-dropdown .ant-picker-panel-container .ant-picker-panels {
+        z-index: 99999;
+        align-self: center;
+        justify-self: center;
+        margin: auto; 
+        display: inline-grid;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-45%, -70%);
+        background: #fff;
+    }
+    .ant-picker-range-wrapper .ant-picker-date-range-wrapper{
+        height: 450px;
+    }
+    
+}
+@media (max-height: 920px) { 
+    .ant-picker-dropdown .ant-picker-panel-container .ant-picker-panels {
+        z-index: 99999;
+        align-self: center;
+        justify-self: center;
+        margin: auto; 
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -60vh);
+        background: #fff;
+    }
+    .formStyle {
+        height: calc(100dvh - 150px);
+        overflow-y: scroll;
+    }
+}
+
+
+@media screen and (max-height: 940px)  and (orientation: landscape) {
+    .ant-picker-dropdown .ant-picker-panel-container .ant-picker-panels{
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -45vh);
+    }
+
+}
+
+

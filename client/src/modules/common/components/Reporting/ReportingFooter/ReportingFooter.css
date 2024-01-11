@@ -1,0 +1,6 @@
+.MuiPaginationItem-root {
+  border: 1px solid #d9d9d9;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 2px !important;
+}

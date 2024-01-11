@@ -1,0 +1,9 @@
+.home-wrapper{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 20px 30px 20px;
+    height: calc(100% - 64px);
+}
+

@@ -1,0 +1,168 @@
+.start-signInWrapper{
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    width: inherit;
+    background-image: url('../../../../../../assets/SingInBackground.svg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.marina{
+  position: absolute;
+  z-index: 1;
+  top: -1px;
+  left: 25px;
+  width: 100px;
+  height: 110px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../../../../../assets/Marina.svg');
+}
+
+.start-form {
+  width: 480px;
+  min-height: 450px;
+  position: relative;
+  translate: 0 -5vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 40px 40px 56px 40px;
+  border-radius: 25px;
+  box-sizing: border-box;
+  box-shadow: 0px 9px 28px 8px rgba(0, 0, 0, 0.05), 0px 6px 16px 0px rgba(0, 0, 0, 0.08), 0px 3px 6px -4px rgba(0, 0, 0, 0.12);
+}
+.heading {
+  color: #000;
+  padding-bottom: 2em;
+  text-align: center;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 24px;
+}
+.start-email-wrapper{
+  width: 100%;
+  margin-bottom: 56px;
+}
+
+.start-email-wrapper > span{
+  color: #EF4444;
+}
+  
+.error-email-wrapper{
+  border: 1.5px solid #EF4444!important;
+}
+.email-wrapper >span{
+  font-size: 12px; 
+  font-weight: 400; 
+  color: #EF4444;
+}
+    
+.email-wrapper label{
+  font-size: 12px;
+  font-weight: 400;
+}
+.email-body{
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid rgb(206, 199, 199);
+  margin-top: 8px;
+}
+.active-email-body{
+   box-shadow: 0px 0px 0px 2px rgba(24, 144, 255, 0.20); 
+}
+  
+
+.email-body input{
+   all:unset;
+   border: 0;
+   width: 100%;
+   border-radius: 2px;
+   margin-left: 16px;
+}
+
+.send-button-active{
+    all:unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 6.4px 15px; 
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 200;
+    align-self: stretch;
+    color: #ffffff;
+    background-color: #2E4880;
+    margin-bottom: 16px;
+  }
+
+  .send-button-disabled{
+    all:unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#00000040;
+    height: 40px;
+    padding: 6.4px 15px; 
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 200;
+    align-self: stretch;
+    background-color: #D9D9D9;
+    border: 1px solid var(--neutral-5, #D9D9D9);
+    background: var(--neutral-3, #F5F5F5);
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.02);
+    margin-bottom: 16px;
+
+  }
+
+.back-home{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+.back-home button{
+    all:unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#00000040;
+    height: 40px;
+    padding: 6.4px 15px; 
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    align-self: stretch;
+    background-color: transparent;
+    border-radius: 2px;
+    cursor: pointer;
+}
+  
+.back-home img{
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 760px)   {
+ 
+  .start-form{
+    box-shadow: none;
+    background-color: transparent;
+    padding: 40px 16px;
+  }
+  .send-button-active .send-button-active{
+    height: 40px;
+  }
+
+  
+}
+
+ 

@@ -1,0 +1,74 @@
+.home-wrapper{
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 20px 40px 20px;
+  height: calc(100% - 64px);
+}
+.style {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  box-shadow: 24;
+  color: 2E4880;
+  background-color: #FFFFFF;
+  padding-bottom: 1px;
+  width: 443px
+}
+
+
+
+@media screen and (max-width: 820px) {
+  .style{
+    max-width: 390px;
+    height: calc(100dvh - 100px);
+    overflow-y: auto;
+  }
+
+  .contentStyle{
+    align-items: center;
+  }
+}
+
+.titleStyle  {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+  align-items: center;
+  height: 56px;
+  background-color: #EFF4FD;
+}
+
+.contentStyle  {
+  padding: 24px;
+  border-bottom: 0.2px solid #D9D9D9;
+  border-top: 0.2px solid #D9D9D9;
+}
+
+.successButtonClose {
+  background-color: #2E4880 !important;
+  color: white;
+  padding: 6.4px 15px;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 2;
+  margin: 2px;
+  height: 40px;
+}
+
+.cancelButtonStyles {
+  all:unset;
+  text-align: center;
+  background-color: #FFFFFF;
+  color: black;
+  border: 0.2px solid #D9D9D9;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 6.4px 15px;
+  border-radius: 2px;
+  outline: 1px solid #D9D9D9;
+  margin: 2px;
+  
+}

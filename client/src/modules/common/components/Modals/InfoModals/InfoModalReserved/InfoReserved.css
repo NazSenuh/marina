@@ -1,0 +1,123 @@
+
+.contentTitle{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    letter-spacing: 0.01rem;
+    color: #595959;
+    white-space: nowrap;
+}
+
+.contentValue{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    letter-spacing: 0.01rem;
+    word-break: break-word;
+    word-wrap: break-word;
+}
+
+.contentStyleData >div{
+    display: flex;
+    text-align: start;
+    width: 100%;
+    min-height: 40px;
+    justify-content: flex-start;
+    margin-left: 40px;
+    white-space:normal ;
+    word-break: break-all;
+}
+
+.cancelReservation {
+    all: unset;
+    background-color: "#FFFFFF";
+    color: "black";
+    border: 1px solid #D9D9D9;
+    font-size: 14;
+    font-weight: 400;
+    padding: 6.4px 15px;
+    border-radius: 2;
+    margin: 2;
+}
+
+
+.paymendMethodcash {
+    border-radius: 2px;
+    padding: 1px 8px;
+    color: #2E4880;
+    text-transform: capitalize;
+    border: 1px solid #7D97CF;
+    background: #EFF4FD;
+}
+
+.paymendMethodcheck {
+    text-transform: capitalize;
+    border-radius: 2px;
+    padding: 1px 8px;
+    color: #EB2F96;
+    border: 1px solid #FFADD2;
+    background: #FFF0F6;
+}
+.paymendMethodcard {
+    text-transform: capitalize;
+    border-radius: 2px;
+    padding: 1px 8px;
+    color: #BD9148;
+    border: 1px solid #FFE198;
+    background: #FCF9ED;
+}
+
+.paymendStatuspaid {
+    padding: 1px 8px;
+    border-radius: 2px;
+    text-transform: capitalize;
+    color: #237804;
+    border: 1px solid #B7EB8F;
+    background: #F6FFED;
+}
+
+.testGridLayout{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+    box-sizing: border-box;
+    border-bottom: #D9D9D9 1px solid;
+    padding: 24px;
+}
+
+.paymendStatusunpaid {
+    padding: 1px 8px;
+    color:  #CF1322; 
+    border-radius: 2px;
+    text-transform: capitalize;
+    border-radius: 2px;
+    border: 1px solid  #FFA39E;
+    background: #FFF1F0;
+}
+.paymendStatuspartiallypaid {
+    padding: 1px 8px;
+    color:  #D1A55C; 
+    border-radius: 2px;
+    font-weight: 400; 
+    text-transform: capitalize;
+    border-radius: 2px;
+    border: 1px solid  #FFE198;
+    background: #FCF9ED;
+}
+
+@media (max-height: 600px) {
+    .contentStyleTitle {
+      height: 50dvh;
+    }
+  }
+  @media (max-height: 600px) {
+    .testGridLayout {
+      height: 70dvh;
+      overflow-y: scroll;
+    }
+  }
+

@@ -1,0 +1,133 @@
+
+
+.signInWrapper{
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    width: inherit;
+    background-image: url('../../../../../../assets/SingInBackground.svg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.marina{
+  position: absolute;
+  z-index: 1;
+  top: -1px;
+  left: 25px;
+  width: 100px;
+  height: 110px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../../../../../assets/Marina.svg');
+}
+.form {
+    width: 480px;
+    height: 450px;
+    position: relative;
+    translate: 0 -5vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 40px 40px 56px 40px;
+    border-radius: 25px;
+    justify-content: space-around;
+    box-sizing: border-box;
+    align-items: center;
+    box-shadow: 0px 9px 28px 8px rgba(0, 0, 0, 0.05), 0px 6px 16px 0px rgba(0, 0, 0, 0.08), 0px 3px 6px -4px rgba(0, 0, 0, 0.12);
+   }
+  .heading {
+    color: #000;
+    padding-bottom: 2em;
+    text-align: center;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 24px;
+  }
+  
+  .home-button-disabled{
+    all:unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#00000040;
+    height: 40px;
+    padding: 6.4px 15px; 
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 200;
+    align-self: stretch;
+    background-color: #D9D9D9;
+    border-radius: 2px;
+    border: 1px solid var(--neutral-5, #D9D9D9);
+    background: var(--neutral-3, #F5F5F5);
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.02);
+    margin-bottom: 16px;
+    
+  }
+
+  .back-home{
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+  }
+
+.back-home button{
+   all:unset;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color:#00000040;
+   height: 40px;
+   padding: 6.4px 15px; 
+   font-size: 14px;
+   line-height: 24px;
+   font-weight: 400;
+   align-self: stretch;
+   background-color: transparent;
+   border-radius: 2px;
+   cursor: pointer;
+}
+  
+
+
+.back-home img{
+    margin-right: 10px;
+}
+
+.recovery-modal-message{
+    width: 420px;
+    height: 95px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.email-name{
+  color: var(--neutral-10, #262626); 
+    font-weight: 500;
+}
+
+@media screen and (max-width: 760px)   {
+  .form{
+    box-shadow: none;
+    background-color: transparent;
+  
+  }
+  .marina{
+    inset: 0;
+    margin: 0 auto;
+  }
+  .recovery-modal-message{
+    width: 400px;
+  }
+}
+  

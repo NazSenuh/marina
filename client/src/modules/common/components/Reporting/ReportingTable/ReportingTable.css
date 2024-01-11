@@ -1,0 +1,12 @@
+.deleteRows {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: sticky; */
+    right: 0;
+    color: #8C8C8C;
+    /* inset: 0; */
+    /* width: 200px; */
+    /* transform: translateX(calc(100dvw - 500px));*/
+   
+}

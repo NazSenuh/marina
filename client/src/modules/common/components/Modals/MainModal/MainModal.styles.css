@@ -1,0 +1,120 @@
+.mainModal-style {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFF;
+    box-shadow: 24;
+    padding-bottom: 1;
+    padding-bottom: 10px;
+    max-width: 543px;
+    width: 90%;
+}
+  
+.titleStyle {
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    padding: 10;
+    align-items: "center";
+    margin-left: "24px";
+    height: 56;
+    background-color: "#EFF4FD";
+
+  }
+  
+  .contentStyle{
+    padding: 24;
+    border: "0.2px solid #D9D9D9";
+    border-top: "0.2px solid #D9D9D9";
+  }
+  
+  .freeStatusStyle {
+    display: "flex";
+    justify-content: 'center';
+    align-items: 'center';
+    border: "1px solid #7D97CF";
+    width:'58px';
+    height: '22px';
+    margin-left: "20px";
+    border-radius: 100;
+    padding: "10px 16px";
+    font-size: '12px';
+    font-weight: '400';
+  }
+  
+  .reservedStatusStyle  {
+    display: "flex";
+    justify-content: 'center';
+    align-items: 'center';
+    border: "1px solid #7D97CF";
+    min-width:'58px';
+    height: '22px';
+    margin-left: "20px";
+    border-radius: 100;
+    padding: "10px 16px";
+    font-size: '12px';
+    font-weight: '400';
+    background-color: ' #D2DFFA';
+  }
+  
+  .blockedStatusStyle  {
+    display: "flex";
+    justify-content: 'center';
+    align-items: 'center';
+    border: "1px solid #FFE5E3";
+    width: '80px';
+    height: '22px';
+    background-color: '#FFA39E';
+    margin-left: "20px";
+    border-radius: 100;
+    padding: "0 10px";
+    font-size: '12px';
+    font-weight: '400';
+    color: '#A8071A'
+  }
+  
+  .ReservebuttonStyle  {
+    background-color: "#2E4880";
+    color: "white";
+    padding: "6.4px 15px";
+    font-size: 14;
+    font-weight: 400;
+    border-radius: 2;
+    margin: 2;
+    font-family: "Poppins";
+  }
+  
+  .BlockbuttonStyle  {
+    background-color: "#FFFFFF";
+    color: "black";
+    border: "1px solid #D9D9D9";
+    font-size: 14;
+    font-weight: 400;
+    padding: "6.4px 15px";
+    border-radius: 2;
+    margin: 2;
+    font-family: "Poppins";
+  }
+  
+  .labelStyles  {
+    display:'flex';
+    align-items:'center';
+    justify-content: 'center';
+  
+    color:'#000000';
+    font-size: 14;
+    font-weight: 400;
+    margin-left: 20
+  }
+
+  @media (max-width: 920px) {
+    .mainModal-style {
+      max-width: 390px;
+    }
+  }
+ 
+  
+  
+  
+  
