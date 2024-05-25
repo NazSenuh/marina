@@ -1,8 +1,9 @@
 import { EBoatTypes, IBboat, EBoatDock } from "../../../../types/marina.types";
 
-import free from '../../../../../assets/Dased.svg'
-import blocked from '../../../../../assets/Blocked.svg'
-import recerved from '../../../../../assets/Recerved.svg'
+import free from '../../../../../assets/freeBlack.svg'
+import blocked from '../../../../../assets/blockedRed.svg'
+import recerved from '../../../../../assets/reservedBlue.svg'
+
 
 import'./Boat.css'
 
@@ -41,14 +42,20 @@ const  Boat= ({type, rotate, dock, code, handleClick}: IBboat)=> {
     const style={
         backgroundImage:`url(${boats()})`,
         rotate: rotate ? '180deg' : '0deg',
-        ...size()
+        ...size(),
+
     }
     
    
     
     return (
       <div className="boatsWrapper" style={style} onClick={()=>handleClick(code,)}>
-        <span  style={{transform:`rotate(${rotate ? '180deg': '0deg'})`}}>{code}</span>
+        <span  
+            style={{transform:`rotate(${rotate ? '180deg': '0deg'})`, color:"#000", fontWeight: 600, position:'absolute', top:1}}
+
+        >
+            {code}
+        </span>
       </div>
     );
   }

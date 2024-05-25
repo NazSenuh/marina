@@ -77,11 +77,14 @@
 }
 
 .datePicker{
-    z-index: 9999;
     height: 40px;
     width: 100%;
     border-radius: 0;
 }
+
+    .adjust_button_hover_drawer.ant-btn:hover { border-color: white !important; }
+
+
 
 .inputStyle {
     all: unset;
@@ -260,7 +263,6 @@
         background: #fff;
     }
     .formStyle {
-        height: calc(100dvh - 150px);
         overflow-y: scroll;
     }
 }

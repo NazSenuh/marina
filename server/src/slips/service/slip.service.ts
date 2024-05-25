@@ -31,6 +31,27 @@ class SlipService {
     });
     return updatedSlip;
   }
+
+  public async modifyAllSlips() {
+    try {
+      // Fetch all slips
+      const slips = await SlipModel.find();
+  
+      // Update each slip based on its index
+      const updatePromises = slips.map((slip, index) => {
+        const finger_pier = index % 2 === 0 ? 'Звичайне' : 'VIP';
+        return SlipModel.findByIdAndUpdate(slip._id, { finger_pier }, { new: true });
+      });
+  
+      // Await all update promises
+      const updatedSlips = await Promise.all(updatePromises);
+  
+      return updatedSlips;
+    } catch (error) {
+      console.error('Error updating slips:', error);
+      throw error;
+    }
+  }
   
 }
 export default new SlipService();

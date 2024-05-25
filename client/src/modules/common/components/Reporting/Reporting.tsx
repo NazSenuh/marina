@@ -39,6 +39,7 @@ function ReportingView({
 
   const handleSort = (columnId: string, currentOrder?: 'asc' | 'desc') => {
     setOrderBy(columnId);
+    console.log(orderBy, 'order');
     setOrder(currentOrder);
 
 
@@ -47,6 +48,8 @@ function ReportingView({
       return
     }
     const sortedData = [...initialData].sort((a, b) => {
+      console.log(a[columnId], 'a[columnId]');
+      console.log(b[columnId], 'b[columnId]');
 
       const fieldOne = a[columnId].toString()
       const fieldTwo = b[columnId].toString()
@@ -55,7 +58,7 @@ function ReportingView({
         return currentOrder === "asc" ? Number(fieldOne) - Number(fieldTwo) : Number(fieldTwo) - Number(fieldOne)
       }
 
-      return currentOrder === "asc" ? fieldOne.localeCompare(fieldTwo) : fieldTwo.localeCompare(fieldOne);
+      return currentOrder === "desc" ? fieldOne.localeCompare(fieldTwo) : fieldTwo.localeCompare(fieldOne);
     });
 
     setData(sortedData);
@@ -88,11 +91,8 @@ function ReportingView({
   
     return (
       (item.fullName.toLowerCase().includes(search.toLowerCase()) ||
-        item.price.toLowerCase().includes(search.toLowerCase()) ||
-        item.email.toLowerCase().includes(search.toLowerCase()))
-      &&
-      (selectedSeasons.length === 0 || selectedSeasons.includes(item.season)) &&
-      (selectedStatus === "" || item.status.toLowerCase() === selectedStatus)
+        item.price.toLowerCase().includes(search.toLowerCase()))
+        
     );
 
   });

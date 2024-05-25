@@ -1,0 +1,9 @@
+.statistic-wrapper{
+    display: flex;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+   
+}

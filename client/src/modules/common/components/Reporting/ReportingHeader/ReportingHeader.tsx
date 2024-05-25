@@ -73,7 +73,7 @@ const ReportingHeader = ({
       <div
         className="reporting-wrapper"
       >
-        <h1>Reporting</h1>
+        <h1>Звітність</h1>
         <Search
           allowClear={true}
           value={search}
@@ -86,181 +86,7 @@ const ReportingHeader = ({
           }}
           className="search-reporting"
         />
-        <FormControl
-          sx={{
-            marginLeft: "8px",
-            height: "30px",
-          }}
-          className="seson-reporting"
-        >
-
-          <InputLabel
-            id="season-filter-label"
-            shrink={false}
-            sx={{ marginTop: "-12px", fontFamily: "'Poppins', sans-serif" }}
-
-          >
-            {selectedSeasons.length === 0 ? "Select season" : ""}
-          </InputLabel>
-          <Select
-            labelId="season-filter-label"
-            id="season-filter"
-            multiple
-            value={selectedSeasons}
-            onChange={(e) => setSelectedSeasons(e.target.value)}
-            renderValue={(selected) => selected.join(", ")}
-            sx={{
-              height: "30px",
-              fontFamily: "'Poppins', sans-serif",
-            }}
-          >
-            {seasons.map((season) => {
-              const isSelected = selectedSeasons.includes(season);
-              return (
-                <MenuItem
-                  key={season}
-                  value={season}
-                  sx={{
-                    fontFamily: "'Poppins', sans-serif",
-                    "&.Mui-selected": {
-                      backgroundColor: "#f5f5f5!important",
-                      "&:hover": {
-                        backgroundColor: "#f5f5f5",
-                      },
-                    },
-                    "&:hover": {
-                      backgroundColor: "#f5f5f5",
-                    },
-                  }}
-                >
-                  <Checkbox checked={isSelected} />
-                  <ListItemText
-                    primary={season}
-                    sx={{
-                      backgroundColor: isSelected ? "#F5F5F5" : "",
-                      fontFamily: "'Poppins', sans-serif",
-                    }}
-                  />
-                </MenuItem>
-              );
-            })}
-          </Select>
-        </FormControl>
-
-
-        <FormControl
-          sx={{
-            marginLeft: "8px",
-            height: "30px",
-            fontFamily: "'Poppins', sans-serif",
-          }}
-          className="status-reporting"
-
-        >
-          <InputLabel
-            id="status-filter-label"
-            shrink={false}
-            sx={{
-              marginTop: "-12px",
-              fontFamily: "'Poppins', sans-serif",
-            }}
-          >
-            {selectedStatus.length === 0 ? "Payment status" : ""}
-          </InputLabel>
-          <Select
-            placeholder="Filter by Status"
-            labelId="status-filter-label"
-            id="status-filter"
-            value={selectedStatus}
-            onChange={(e) =>
-             { setSelectedStatus(removeUnderscore(e.target.value.toUpperCase().toLowerCase()))
-              console.log(removeUnderscore(e.target.value.toUpperCase().toLowerCase()))}
-            }
-            
-            renderValue={(selected) =>
-            ({
-              [""]: "All",
-              ["unpaid"]: "Unpaid",
-              ["paid"]: "Paid",
-              ["partially_paid"]: "Partially paid",
-
-            }[selected])
-            }
-            sx={{
-              height: "30px",
-              fontFamily: "'Poppins', sans-serif",
-            }}
-          >
-            <MenuItem
-              value=""
-              sx={{
-                fontFamily: "'Poppins', sans-serif",
-                "&.Mui-selected": {
-                  backgroundColor: "#f5f5f5",
-                  "&:hover": {
-                    backgroundColor: "#f5f5f5",
-                  },
-                },
-                "&:hover": {
-                  backgroundColor: "#f5f5f5",
-                },
-              }}
-            >
-              All
-            </MenuItem>
-            <MenuItem
-              value="Paid"
-              sx={{
-                fontFamily: "'Poppins', sans-serif",
-                "&.Mui-selected": {
-                  backgroundColor: "#f5f5f5",
-                  "&:hover": {
-                    backgroundColor: "#f5f5f5",
-                  },
-                },
-                "&:hover": {
-                  backgroundColor: "#f5f5f5",
-                },
-              }}
-            >
-              Paid
-            </MenuItem>
-            <MenuItem
-              value="Unpaid"
-              sx={{
-                fontFamily: "'Poppins', sans-serif",
-                "&.Mui-selected": {
-                  backgroundColor: "#f5f5f5",
-                  "&:hover": {
-                    backgroundColor: "#f5f5f5",
-                  },
-                },
-                "&:hover": {
-                  backgroundColor: "#f5f5f5",
-                },
-              }}
-            >
-              Unpaid
-            </MenuItem>
-            <MenuItem
-              value="Partially paid"
-              sx={{
-                fontFamily: "'Poppins', sans-serif",
-                "&.Mui-selected": {
-                  backgroundColor: "#f5f5f5",
-                  "&:hover": {
-                    backgroundColor: "#f5f5f5",
-                  },
-                },
-                "&:hover": {
-                  backgroundColor: "#f5f5f5",
-                },
-              }}
-            >
-              Partially paid
-            </MenuItem>
-          </Select>
-        </FormControl>
+  
         <Button
           variant="contained"
           color="primary"
@@ -271,7 +97,7 @@ const ReportingHeader = ({
             backgroundColor: "#2E4880",
             fontFamily: "'Poppins', sans-serif",
             fontWeight: "400",
-            width: "70px",
+            width: "120px",
             fontSize: "12px",
             padding: "4px 15px",
             borderRadius: "2px"
@@ -279,7 +105,7 @@ const ReportingHeader = ({
           onClick={() => handleCsv()}
           className="export-reporting"
         >
-          Export
+          Експортувати
         </Button>
       </div>
       {/* </div> */}

@@ -16,6 +16,7 @@ export class SeasonController {
 
   public async getActiveSeason(_: Request, res: Response) {
     try {
+
       const season = await SeasonService.getActiveSeason();
       res.send(season);
     } catch (error: any) {

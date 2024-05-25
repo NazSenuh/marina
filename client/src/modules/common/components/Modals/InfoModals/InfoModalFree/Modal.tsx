@@ -24,9 +24,8 @@ export default function InfoModalFree({ finger_pier, width, max_size , setModalV
         <Stack borderBottom={'1px solid #D9D9D9'} >
           <Stack direction="row">
             <div style={contentStyle}>
-              <div>Finger pier: {finger_pier}</div>
-              <div>Width: {width}</div>
-              <div>Max boat size: {max_size}</div>
+              <div>Тип місця: {finger_pier}</div>
+              
             </div>
           </Stack>
         </Stack>

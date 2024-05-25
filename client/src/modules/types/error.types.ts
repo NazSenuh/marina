@@ -1,7 +1,7 @@
 export enum EValidateError {
-   NAME_MESSAGE = 'Must be between 2 and 50 characters',
-   PHONE_MESSAGE = 'Enter valid phone number',
-   EMAIL_MESSAGE = 'Enter valid email',
+   NAME_MESSAGE = 'Мусь бути не менше 2-х символів',
+   PHONE_MESSAGE = 'Введіть дійсний номер телефону',
+   EMAIL_MESSAGE = 'Введіть дійсну електронну адресу',
 }
 
 export enum EStatus{

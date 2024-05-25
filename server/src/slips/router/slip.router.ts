@@ -13,6 +13,8 @@ export class SlipRouter{
     private initRouters() {
         this.router.post('/', this.slipController.createSlip)
         this.router.get('/', this.slipController.getAllSlips)
+        this.router.patch('/modifyAll', this.slipController.modifyAll)
+
         this.router.get('/:code', this.slipController.getOneSlip)
         this.router.patch('/block/:code',  this.slipController.blockSlip)
         this.router.patch('/modifyAll',  this.slipController.setFree)

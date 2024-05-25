@@ -14,6 +14,7 @@ import seasonService from "../../../services/season.service";
 import AnnouncementModal from "../Modals/AnnouncementModal/AnnouncementModal";
 
 import "./Header.scss";
+import { TimePicker } from "antd";
 
 export const Header = () => {
   const history = useHistory();
@@ -72,7 +73,8 @@ export const Header = () => {
       {shouldNotInclude ?
         <header className="nav-bar" >
           <div className="logoWrapper">
-            <img src={Logo} />
+            {/* <img src={Logo} /> */}
+
           </div>
           <div className='burger-menu'>
             <input type="checkbox" onChange={inputHandler} checked={openMenu} />
@@ -84,7 +86,7 @@ export const Header = () => {
             <div className="buttons-wrapper">
               <NavigationTabs activeTab={activeTab} setActiveTab={setActiveTab} handleClick={()=>{setClassNames('input-not-checked'); setOpenMenu(false)}} />
               <div className="modal-buttons">
-                <ModalTrigger
+                {/* <ModalTrigger
                   isOpenModal={isOpenModal}
                   setIsOpenModal={setIsOpenModal}
                   handleSuccess={handleYes}
@@ -96,10 +98,10 @@ export const Header = () => {
                   }
                 >
                   <AnnouncementModal onClose={handleClose} />
-                </ModalTrigger>
+                </ModalTrigger> */}
                 <div onClick={Logout} className="logOut">
                   <img src={LogOutImg} alt="logOut" />
-                  Log out
+                  Вихід
                 </div>
               </div>
             </div>

@@ -1,5 +1,5 @@
 //@ts-nocheck
-import React, { useEffect, useState, useContext, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Table,
   TableBody,
@@ -28,7 +28,6 @@ import { Button } from "antd";
 import slipService from "../../../../services/slip.service";
 
 import './ReportingTable.css'
-import { ref } from "yup";
 
 
 const theme = createTheme({
@@ -60,15 +59,11 @@ export const ReportingTable = ({
   order,
 }) => {
   const columns = {
-    fullName: "Full name",
-    phoneNumber: "Phone number",
-    email: "Email",
-    boatSize: "Boat size",
-    parkingDuration: "Parking duration",
-    paymentMethod: "Payment method",
-    price: "Price",
-    status: "Payment status",
-    type: "Reservation status"
+    fullName: "Ім'я",
+    phoneNumber: "Номер телефону",
+    parkingDuration: "Тривалість парковки",
+    price: "Ціна",
+    type: "Статус резервації"
   };
   const [dataLength, setDataLength] = useState(1)
   const [selectedLength, setSelectedLength] = useState(selected.length)
@@ -230,6 +225,12 @@ export const ReportingTable = ({
     }
     return str
   }
+  const rentConfig = {
+    "closed":"завершене",
+    "active":"активне",
+    "canceled":"скасоване"
+  }
+
   return (
     <ThemeProvider theme={theme}>
       {!dataLength ?
@@ -279,6 +280,7 @@ export const ReportingTable = ({
 
                       {!selected.length ?
                         Object.keys(columns).map((columnId, i) => {
+
                           const sortColumnById = (currentOrder: 'asc' | 'desc') => {
                             handleSort(columnId, currentOrder);
                           };
@@ -353,10 +355,7 @@ export const ReportingTable = ({
                           <BasicCustomColumnHeaderCell >
                           </BasicCustomColumnHeaderCell><BasicCustomColumnHeaderCell >
                           </BasicCustomColumnHeaderCell><BasicCustomColumnHeaderCell >
-                          </BasicCustomColumnHeaderCell><BasicCustomColumnHeaderCell >
-                          </BasicCustomColumnHeaderCell><BasicCustomColumnHeaderCell >
-                          </BasicCustomColumnHeaderCell><BasicCustomColumnHeaderCell >
-                          </BasicCustomColumnHeaderCell><BasicCustomColumnHeaderCell >
+                         
                           </BasicCustomColumnHeaderCell>
 
                           <ModalTrigger
@@ -451,69 +450,13 @@ export const ReportingTable = ({
 
                       <CustomTableBodyCell >{item.fullName}</CustomTableBodyCell>
                       <CustomTableBodyCell width={"150px"}>{item.phoneNumber}</CustomTableBodyCell>
-                      <CustomTableBodyCell width={"200px"}>{item.email}</CustomTableBodyCell>
-                      <CustomTableBodyCell>{item.boatSize}</CustomTableBodyCell>
                       <CustomTableBodyCell width={"200px"}>
                         {item.parkingDuration}
                       </CustomTableBodyCell>
-                      <CustomTableBodyCell>
-                        {(() => {
-                          const chipProps = {
-                            ["cash"]: {
-                              borderColor: "#7D97CF",
-                              backgroundColor: "#EFF4FD",
-                              color: "#2E4880",
-                              width: "56px",
-                            },
-                            ["card"]: {
-                              borderColor: "#FFE198",
-                              backgroundColor: "#FCF9ED",
-                              color: "#BD9148",
-                              width: "56px",
-                            },
-                            ["check"]: {
-                              borderColor: "#EB2F96",
-                              backgroundColor: "#FFF0F6",
-                              color: "#EB2F96",
-                              width: "fit-content",
-                            },
-                          }[item.paymentMethod.toUpperCase().toLowerCase()];
-                          chipProps.text = removeUnderscore(item.paymentMethod);
-                          return <Chip {...chipProps} key={i} />;
-                        })()}
-                      </CustomTableBodyCell>
+                     
                       <CustomTableBodyCell>{item.price}</CustomTableBodyCell>
-                      <CustomTableBodyCell>
-                        {(() => {
-                          const chipProps = {
-                            ["paid"]: {
-                              borderColor: "#B7EB8F",
-                              backgroundColor: "#F6FFED",
-                              color: "#237804",
-                              width: "50px",
-                            },
-                            ["unpaid"]: {
-                              borderColor: "#FFA39E",
-                              backgroundColor: "#FFF1F0",
-                              color: "#CF1322",
-                              width: "70px",
-                            },
-                            ["partially_paid"]: {
-                              bordercolor: "#FFE198",
-                              border: "1px solid",
-                              backgroundColor: "#FCF9ED",
-                              color: "#D1A55C",
-                              width: "120px",
-                              textAlign:"center"
-                            },
-                          }[item.status.toUpperCase().toLowerCase()];
-
-
-
-                        chipProps.text = removeUnderscore(item.status);
-                        return <Chip {...chipProps} key={i} />;
-                        })()}
-                      </CustomTableBodyCell>
+                      
+                      
 
                       <CustomTableBodyCell>
                         {(() => {
@@ -540,7 +483,7 @@ export const ReportingTable = ({
                               width: "70px",
                             },
                           }[item.type.toUpperCase().toLowerCase()];
-                          chipProps.text = removeUnderscore(item.type);
+                          chipProps.text = rentConfig[item.type];
                           return <Chip {...chipProps} key={i} />;
                         })()}
                       </CustomTableBodyCell>

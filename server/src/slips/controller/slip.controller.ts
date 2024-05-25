@@ -80,5 +80,14 @@ export class SlipController {
             res.status(e.status|| 500).json(e.message)
         }
     } 
+
+    public async modifyAll(req: Request, res: Response) {
+        try {
+            const slip = await slipService.modifyAllSlips()
+            res.send(slip)
+        } catch(e:any) {
+            res.status(e.status|| 500).json(e.message)
+        }
+    }
     
 }

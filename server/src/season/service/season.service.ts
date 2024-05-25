@@ -38,7 +38,9 @@ class SeasonService {
   }
 
   public async getSeason(dto: FindSeasonDto) {
+
     const { seasonNumber } = dto;
+  
     return SeasonModel.findOne({ seasonNumber });
   }
 
@@ -56,6 +58,7 @@ class SeasonService {
           seasonNumber: currentYear,
           status: "active",
         });
+
         return newActiveSeason;
       }
 

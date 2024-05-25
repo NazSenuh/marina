@@ -4,8 +4,8 @@ import "./PageHeader.css";
 function PageHeader() {
   return (
     <div className="page-header-wrappers">
-      <label>Home</label>
-      <CloseSeason />
+      <label>Головна</label>
+      {/* <CloseSeason /> */}
     </div>
   );
 }

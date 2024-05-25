@@ -14,8 +14,9 @@ import seasonService from '../../../../services/season.service';
 import Star from '../../../../../assets/Star.svg'
 import './AnnouncementModal.css'
 import { toastError, toastSuccess } from '../../Toasts/Toasts';
+import locale from 'antd/es/date-picker/locale/uk_UA';
 
-
+dayjs.locale('uk-UA');
 function ActionList(props: PickersActionBarProps) {
     const { onAccept, onSetToday, className } = props;
     const actions = [
@@ -132,6 +133,7 @@ export default function AnnouncementModal({ onClose }: IBlockModalProps) {
                         inputReadOnly={true}
                         disabledDate={isWithinNext7Days}
                         placement='bottomLeft'
+                        locale={locale}
                         
                         
                     />

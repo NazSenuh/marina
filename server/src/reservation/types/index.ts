@@ -3,21 +3,16 @@ import { Schema } from "mongoose";
 export interface IReservation {
   fullName: string;
   phoneNumber: string;
-  email: string;
-  boatLength: string;
-  boatName:string;
-  draft:string;
-  boatWidth: string;
   startDate: string;
   endDate: string;
-  powerSource: string;
-  paymentMethod: string;
   price: string;
-  status: string;
-  type:EStatus;
-  seasonNumber: string;
+  type: string;
   slip: Schema.Types.ObjectId;
-  season: Schema.Types.ObjectId;
+}
+
+export interface IStatystic {
+  hour: string;
+  count: number;
 }
 
 export enum EStatus{

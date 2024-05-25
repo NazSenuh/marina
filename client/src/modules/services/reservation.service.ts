@@ -18,32 +18,24 @@ export class ReservationService {
           _id,
           fullName,
           phoneNumber,
-          email,
-          boatLength,
-          boatWidth,
           startDate,
           endDate,
-          paymentMethod,
-          status,
           price,
-          season,
           type
         },
       ) => ({
         _id,
         fullName,
         phoneNumber,
-        email,
-        boatSize: `${boatLength} x ${boatWidth}`,
+       
         parkingDuration: `${startDate} - ${endDate}`,
-        paymentMethod,
         price,
-        status,
-        season: season.seasonNumber,
         type
       })
+
     
     );
+
     return displayableData;
   }
 
@@ -66,6 +58,10 @@ export class ReservationService {
 
   async deleteReservation(ids: string[]) {
     return this.httpService.patch(`api/reservations/`,ids, true);
+  }
+
+  async getReservStatistic(): Promise<any> {
+    return this.httpService.delete('api/reservations/statystic')
   }
   
 }

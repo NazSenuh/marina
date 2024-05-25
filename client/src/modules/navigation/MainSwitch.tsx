@@ -14,6 +14,7 @@ import { useQuery } from "react-query";
 import reservationService from "../services/reservation.service";
 import { useEffect, useContext} from "react";
 import { ReportingContext } from "../context/reportingContext";
+import { StatysticChart } from "../common/components/Statistic/Statistic";
 
 export const MainSwitch = () => {
   const data = useContext(ReportingContext)
@@ -50,6 +51,8 @@ export const MainSwitch = () => {
         <Route component={LinkExpiredModal} path={APP_KEYS.ROUTER_KEYS.EXPIRED} />
         <Route component={()=> <Reporting reportingData={reportingData} isLoading={isLoading} refetch={refetch} />} path={APP_KEYS.ROUTER_KEYS.REPORTING} />
         <Route component={InfoModal} path={APP_KEYS.ROUTER_KEYS.MODAL} />
+        <Route component={StatysticChart} path={APP_KEYS.ROUTER_KEYS.STATISTIC} />
+
       </>
     </Switch>
   )

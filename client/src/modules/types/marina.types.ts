@@ -1,4 +1,3 @@
-import dayjs from "dayjs";
 
 export interface ILoginUser {
   email: string;
@@ -20,15 +19,10 @@ export interface IAnnouncement {
 export interface IReservation {
   fullName: string;
   phoneNumber: string;
-  email: string;
-  boatLength: string;
-  boatWidth: string;
+
   startDate: string;
   endDate: string;
-  paymentMethod: ECheckboxCash;
-  status: ECheckboxType;
   price: string;
-  season: ISeason;
   type?: EStatus
 }
 export enum EStatus{
@@ -57,14 +51,8 @@ export interface IReservationDisplay {
   _id: string;
   fullName: string;
   phoneNumber: string;
-  email: string;
-  boatSize: string;
   parkingDuration: string;
-  paymentMethod: string;
   price: string;
-  status: string;
-  season: string;
-  type:string;
   [key: string]: string | number;
 }
 

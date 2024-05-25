@@ -6,6 +6,7 @@ export const ROUTER_KEYS = {
   SET_NEW_PASSWORD: "/newpass/:link",
   EXPIRED: "/expired",
   REPORTING: "/reporting",
+  STATISTIC: '/statistics',
   MODAL: "/modal",
   LINK_CKECKER: "/verify/:link",
 

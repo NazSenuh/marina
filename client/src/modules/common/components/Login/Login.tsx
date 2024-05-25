@@ -116,14 +116,14 @@ export default function Login() {
 
       </div>
       <div className="formLogIn">
-        <p className="heading">Sing In</p>
+        <p className="heading">Логін</p>
 
         <div className="email-wrapper">
-          <label>Email</label>
+          <label>Електронна пошта</label>
           <div className={toggleInputStyle('text')}>
             <img src={mailIcon} alt="mail" />
             <input
-              placeholder="Email"
+              placeholder="Електронна пошта"
               onFocus={() => setEmailFocus(true)}
               onBlur={BlurChangeEmail}
               type="text"
@@ -139,31 +139,31 @@ export default function Login() {
         </div>
 
         <div className="password-wrapper">
-          <label>Password</label>
+          <label>Пароль</label>
           <div className={toggleInputStyle('password')}>
             <img src={passwordIcon} alt="password" />
             <input
               onFocus={() => setPasswordFocus(true)}
               onBlur={() => setPasswordFocus(false)}
-              placeholder="Password"
+              placeholder="Пароль"
               type={passwordShown ? "text" : "password"}
               value={password} onChange={passwordHandler}
             />
             <img src={eyeIcon} onClick={togglePassword} alt="show" />
           </div>
-          {error ? <span>Incorrect email or password</span> : null}
+          {error ? <span> Неправильна адреса електронної пошти або пароль</span> : null}
         </div>
 
 
         <a href="/recover" className="forgot_password">
-          Forgot Password?
+          Забули пароль?
         </a>
 
         <button
           className={credEmpty ? 'sign-in-button-active' : 'sign-in-button-disabled'}
           disabled={!credEmpty}
           onClick={signHandler}  >
-          Sign In
+          Увійти
         </button>
       </div>
     </div>

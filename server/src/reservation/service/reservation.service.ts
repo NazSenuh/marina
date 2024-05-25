@@ -1,6 +1,6 @@
 import { it } from "node:test";
 import { CreateReservationDto } from "../dto/create-reservation";
-import { ReservationModel } from "../model/reservation.model";
+import { ReservStatysticModel, ReservationModel } from "../model/reservation.model";
 import { EStatus, ICsv, IReservation } from "../types";
 import { Document, Types } from "mongoose";
 import slipService from "../../slips/service/slip.service";
@@ -9,10 +9,22 @@ import { EType } from "../../slips/types";
 
 class ReservationService {
   public async createReservation(dto: IReservation) {
+
     return await ReservationModel.create({ ...dto });
   }
+  public async reservStatystic(time: string) {
+    const hourDoc = await ReservStatysticModel.findOne({hour:`${time}:00`})
+    if(hourDoc){
+      await hourDoc.updateOne({$inc: {count: 1}}) 
+    }else{
+      await ReservStatysticModel.create({hour:`${time}:00`, count: 1})
+    }
+  }
+  public async getReservStatystic() {
+    return ReservStatysticModel.find();
+  }
   public async getAllReservations() {
-    return ReservationModel.find().populate("season");
+    return ReservationModel.find();
   }
   public async modifyReservations(code: any, data: Partial<IReservation>) {
     const filter = {slip: code, type: EStatus.ACTIVE};
@@ -36,6 +48,10 @@ class ReservationService {
     }
   }
 
+  public async deleteSomeReservation() {
+    await ReservationModel.deleteMany();
+  }
+
   public async generateCsv(ids: string[]) {
     let result: (Document<unknown, {}, IReservation> & IReservation & {
       _id: Types.ObjectId;
@@ -52,14 +68,15 @@ class ReservationService {
     }
     const data: string[] = []
 
-    const headers = ['Full Name','Phone Number', 'Email', 'Boat Size', 'Parking Duration', 'Payment Method', "Price", 'Payment Status', 'Reservation Status']
+    const headers = ['Ім\'я','Телефон', 'Тривалість парковки', "Ціна"]
     data.push(headers.join(','))
 
+
+
     for (const item of result) {
-      const boatSize = `${item.boatLength} X ${item.boatWidth}`
       const parkingDuration = `${item.startDate} X ${item.endDate}`
 
-      const currentRow = [item.fullName, item.phoneNumber, item.email, boatSize, parkingDuration, item.paymentMethod,item.price, item.status, item.type]
+      const currentRow = [item.fullName, item.phoneNumber,  parkingDuration,item.price]
       data.push(currentRow.join(','))
     }
 
